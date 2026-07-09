@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+# This finds the exact folder where app.py is saved,
+# so the CSV can always be found no matter where Streamlit runs from
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Page setup
 st.set_page_config(page_title="Telco Churn EDA", layout="wide")
@@ -11,7 +16,8 @@ st.write("Simple interactive dashboard to explore the Telco Customer Churn datas
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Telco-Customer-Churn.csv")
+    csv_path = os.path.join(BASE_DIR, "Telco-Customer-Churn.csv")
+    df = pd.read_csv(csv_path)
     # Fix TotalCharges (it has some blank values stored as text)
     df["TotalCharges"] = df["TotalCharges"].replace(" ", "0")
     df["TotalCharges"] = df["TotalCharges"].astype(float)
