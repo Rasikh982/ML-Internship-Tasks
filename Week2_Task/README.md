@@ -1,40 +1,32 @@
-# Task 02 — Advanced Data Cleaning & Preprocessing
+Task 02 — Advanced Data Cleaning & Preprocessing
 
 Month 1 | ML Internship Program | Student: Rasikh
 
-## 📌 Task Overview
+📌 Task Overview
 
-Is task mein NYC Airbnb dataset (`AB_NYC_2019.csv`) par ek reusable data cleaning pipeline banayi gayi hai jo:
-- Missing values handle karti hai
-- Outliers remove karti hai
-- Type inference (date conversion) karti hai
-- Basic schema validation karti hai
+In this task, a reusable data cleaning pipeline was created for the NYC Airbnb dataset (AB_NYC_2019.csv). The pipeline performs the following operations:
 
-## 📂 Files
-
-- `AB_NYC_2019.csv` — Original dataset
-- `colab_code.py` — Google Colab ke liye simple cleaning script
-- `app.py` — Streamlit app jo cleaning process ko visually dikhata hai
-- `requirements.txt` — Required Python libraries
-- `.gitignore` — Unnecessary files ko git se exclude karne ke liye
-
-## 🚀 How to Run (Streamlit App)
-
-```bash
+Handles missing values
+Removes outliers
+Infers data types (date conversion)
+Performs basic schema validation
+📂 Files
+AB_NYC_2019.csv — Original dataset
+colab_code.py — Data cleaning script for Google Colab
+app.py — Streamlit application that visually demonstrates the data cleaning process
+requirements.txt — List of required Python libraries
+.gitignore — Excludes unnecessary files from Git tracking
+🚀 How to Run the Streamlit App
 pip install -r requirements.txt
 streamlit run app.py
-```
-
-## 🧠 Cleaning Steps
-
-1. `name` aur `host_name` missing values → "Unknown"
-2. `reviews_per_month` missing values → 0
-3. `last_review` → proper datetime format
-4. Price outliers (0 ya >1000) remove
-5. Minimum nights > 365 wale rows remove
-6. Duplicate rows remove
-7. Schema validation check
-
-## 📊 Dataset Source
+🧠 Data Cleaning Steps
+Replace missing values in name and host_name with "Unknown".
+Replace missing values in reviews_per_month with 0.
+Convert the last_review column to the proper datetime format.
+Remove rows with price outliers (price = 0 or price > 1000).
+Remove rows where minimum_nights is greater than 365.
+Remove duplicate rows.
+Perform basic schema validation to ensure data consistency.
+📊 Dataset Source
 
 NYC Airbnb Open Data 2019 (Kaggle)
