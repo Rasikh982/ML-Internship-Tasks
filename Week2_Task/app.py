@@ -5,7 +5,9 @@ st.title("🧹 NYC Airbnb Data Cleaning App")
 st.write("Task 02 - Advanced Data Cleaning & Preprocessing")
 
 # Data load karo
-df = pd.read_csv("AB_NYC_2019.csv")
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_csv(os.path.join(BASE_DIR, "AB_NYC_2019.csv"))
 
 st.subheader("Original Data")
 st.write("Shape:", df.shape)
