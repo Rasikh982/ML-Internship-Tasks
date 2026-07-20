@@ -1,4 +1,4 @@
-# 🧠 ML Internship Tasks — Mussa Khan
+# 🧠 ML Internship Tasks — Rasikh Khan
 
 > A **3-Month Machine Learning Internship Program** (24 tasks) covering Advanced Data Analysis, Applied ML, MLOps, and Industry-Level Projects.
 
