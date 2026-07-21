@@ -7,7 +7,9 @@ from scipy.stats import chi2_contingency
 st.title("A/B Test Analysis")
 
 # Load data
-df = pd.read_csv("ab_data.csv")
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_csv(os.path.join(BASE_DIR, "ab_data.csv"))
 
 # Keep correct records only
 df = df[
