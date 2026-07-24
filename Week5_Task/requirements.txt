@@ -1,5 +1,4 @@
-streamlit==1.38.0
-click==8.1.7
+streamlit
 pandas
 numpy
 matplotlib
